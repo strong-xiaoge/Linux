@@ -1,5 +1,0 @@
-hello
-word
-你好
-Git
-is
