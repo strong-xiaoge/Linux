@@ -52,3 +52,56 @@ A[Log分类]
 - 增加线程安全，增加了输出实例的修改接口
 - 增加格式化实例函数，并增加了修改接口
 
+#### 2020年7月8日
+
+```C++
+/**
+ * @brief LOG构造函数
+ * parameter : level : 日志级别,默认为UNKNOWN
+ *             name : 日志输出文件名,默认为LOG.log
+ *             output : 数据输出实现函数,默认输出到name文件中
+ */
+LOG(FORMAT::LOGLEVEL level,
+    std::string name,
+    bool (*output)(const OUTDATA*))
+
+/**
+ * @brief 更新后台数据
+ */
+void logUpdata(void)
+
+/**
+ * @brief 等待后台日志更新完成
+ * parameter : outtime : 等待超时时间,默认为最大
+ * return : 更新完成返回 true ，否则返回 false 
+ */
+bool LOG::weitlogUpdate(uint32_t outtime)
+
+/**
+ * @brief 设置日志输出文件名
+ * parameter : name : 文件名
+ */
+void setLogNmae(std::string name)
+  
+/**
+ * @brief 获取日志输出文件名
+ * return : 文件名
+ */
+std::string getLogNmae(void)
+    
+/**
+ * 重载了printf与<<
+ * printf与stdio中的printf语法一样
+ * <<仅支持字符（串），数字
+ */
+    
+/**
+ * LOG析构时会自动将未更新的数据更新完
+ * LOG每隔3S也会更新一次数据
+ */
+    
+/*其余的可执行查看源代码*/
+```
+
+
+

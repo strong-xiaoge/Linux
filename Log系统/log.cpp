@@ -121,6 +121,12 @@ namespace log{
         this->Output=output;
         return true;
     }
+    /**
+    * @brief LOG构造函数
+    * parameter : level : 日志级别,默认为UNKNOWN
+    *             name : 日志输出文件名,默认为LOG.log
+    *             output : 数据输出实现函数,默认输出到name文件中
+    */
     LOG::LOG(FORMAT::LOGLEVEL level=FORMAT::UNKNOWN,
             std::string name="LOG.log",
             bool (*output)(const OUTDATA*)=outPut)
@@ -187,7 +193,7 @@ namespace log{
         return size;
     }
     /**
-     * @brief 后台日志更新完成
+     * @brief 更新后台信息
     */
     void LOG::logUpdata(){
         logupdataflag=true;

@@ -81,7 +81,7 @@ namespace log{
             std::string name,
             bool (*output)(const OUTDATA*));
         ~LOG();
-        //后台日志更新完成
+        //更新后台数据
         void logUpdata(void);
         //等待后台数据更新完成
         bool weitlogUpdate(uint32_t outtime);
