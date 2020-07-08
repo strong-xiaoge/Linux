@@ -1,3 +1,7 @@
+/**
+ * 作者:小哥
+ * 时间:2020年7月8日
+*/
 #include "log.h"
 #include<iostream>
 #include<fstream>
